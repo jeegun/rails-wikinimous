@@ -1,5 +1,11 @@
-<h2><%= @article.title %></h2>
-<%= link_to "Back to list", articles_path %>
-<%= link_to "Delete article", article_path(@article), method: :delete, data: {confirm: "Delete #{@article.title}?"} %>
+<div class="container">
+<h2 class="border-bottom">
+  <%= @article.title %>
+  <br>
+  <small>
+  <%= link_to '<i class="fas fa-edit"></i>'.html_safe, edit_article_path(@article) %>
+  <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, article_path(@article), method: :delete, data: {confirm: "Delete #{@article.title}?"} %>
+  </small>
+</h2>
 <p><%= @article.content %></p>
-<%= link_to "Edit article", edit_article_path(@article) %>
+</div>

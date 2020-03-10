@@ -12,6 +12,10 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <%= link_to '<h2>Springfield News</h2>'.html_safe, articles_path %>
+      <%= link_to '<button class="btn btn-link">+ New article</button>'.html_safe, new_article_path %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts 'Creating 10 fake articles...'
-10.times do
+puts 'Creating 25 fake articles...'
+25.times do
   article = Article.new(
-    title: Faker::TvShows::Simpsons.location,
-    content: Faker::TvShows::Simpsons.quote
+    title: Faker::TvShows::Simpsons.quote,
+    content: "#{Faker::TvShows::Simpsons.character} reporting from #{Faker::TvShows::Simpsons.location}"
   )
   article.save!
 end
